@@ -4,7 +4,11 @@
   "description": " A basic starter for an express.js API",
   "main": "index.js",
   "scripts": {
-    "start": "node backend/src/index.js",
+     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node backend/src/app.js"
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "start": "node client/src/index.js",
+    "client": "cd client and npm run start",
     "dev": "nodemon backend/src/index.js",
     "build": "cd client && npm run build",
     "lint": "eslint --fix src",
