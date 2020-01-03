@@ -1,0 +1,30 @@
+body {
+  width:100vw;
+  height:100vh;
+  font:black;
+}
+
+#root{
+  height:50%;
+}
+
+.Map{
+  height:400px;
+  padding:0px;
+  margin:0px;
+}
+
+.sideleft{
+  height:400px;
+  padding:0px;
+  margin:0px;
+}
+
+.header{
+  color:white;
+}
+
+video {
+  width:75%;
+  height:50%
+}
