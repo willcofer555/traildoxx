@@ -1,2 +1,0 @@
-# traildoxx
-portfolio react project
