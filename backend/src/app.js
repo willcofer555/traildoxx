@@ -10,6 +10,7 @@ const middlewares = require('./middlewares');
 const api = require('./api');
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 
 
 
@@ -36,5 +37,12 @@ app.use(middlewares.errorHandler);
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("../../client/build"));
 }
+
+
+app.listen(PORT, () => {
+  /* eslint-disable no-console */
+  console.log(`Listening: http://localhost:${port}`);
+  /* eslint-enable no-console */
+});
 
 module.exports = app;
