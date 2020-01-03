@@ -11,7 +11,6 @@
     "audit": "snyk test",
     "test": "mocha -w",
     "install": "cd client and npm install",
-    "heroku-postbuild": "npm run build"
   },
   "keywords": [],
   "author": "CJ R. <cj@null.computer> (https://w3cj.now.sh)",
