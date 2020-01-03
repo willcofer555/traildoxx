@@ -50,10 +50,11 @@
     "mocha": "^5.2.0",
     "mongodb": "^3.4.1",
     "nodemon": "^1.18.9",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "snyk": "^1.254.0",
     "supertest": "^3.3.0",
-    "typescript": "^3.7.3",
-    "react": "^16.12.0"
+    "typescript": "^3.7.3"
   },
   "bugs": {
     "url": "https://github.com/w3cj/express-api-starter/issues"
@@ -62,6 +63,8 @@
   "directories": {
     "test": "test"
   },
-  "cacheDirectories": ["client/node_modules", "backend/node_modules"]
-
+  "cacheDirectories": [
+    "client/node_modules",
+    "backend/node_modules"
+  ]
 }
