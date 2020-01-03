@@ -10,7 +10,7 @@
     "lint": "eslint --fix src",
     "audit": "snyk test",
     "test": "mocha -w",
-    "install": "cd client and npm install",
+    "install": "cd client and npm install"
   },
   "keywords": [],
   "author": "CJ R. <cj@null.computer> (https://w3cj.now.sh)",
