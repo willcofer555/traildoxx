@@ -60,5 +60,7 @@
   "homepage": "https://github.com/w3cj/express-api-starter#readme",
   "directories": {
     "test": "test"
-  }
+  },
+  "cacheDirectories": ["client/node_modules", "backend/node_modules"]
+
 }
