@@ -7,8 +7,8 @@ const monk = require('monk');
 
 require('dotenv').config();
 
-const middlewares = require('backend/src/middlewares');
-const api = require('backend/src/api');
+const middlewares = require('./backend/src/middlewares');
+const api = require('./backend/src/api');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
