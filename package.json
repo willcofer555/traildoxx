@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node backend/src/index.js",
     "dev": "nodemon backend/src/index.js",
-    "build": "mkdir -p public && touch public/index.html",
+    "build": "cd client && npm run build",
     "lint": "eslint --fix src",
     "audit": "snyk test",
     "test": "mocha -w"
