@@ -24,7 +24,7 @@ app.use(helmet());
 app.use(express.json());
 app.use(cors());
 
-
+require('backend/src/db');
 
 app.get('/', (req, res) => {
   res.json({
@@ -34,14 +34,16 @@ app.get('/', (req, res) => {
 
 app.use('/api/v1', api);
 
+app.use(require('backend/src/api/messages'));
+
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use('/', express.static(path.join(__dirname, "client/build")));
 
   app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html')); // relative path
+        res.sendFile(path.join(__dirname, 'client/build', 'index.html')); // relative path
     });
 }
 
