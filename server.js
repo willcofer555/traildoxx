@@ -26,11 +26,6 @@ app.use(cors());
 
 require('./backend/src/db');
 
-app.get('/', (req, res) => {
-  res.json({
-    message: 'The world is ending'
-  });
-});
 
 app.use('/api/v1', api);
 
