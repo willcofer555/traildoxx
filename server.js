@@ -24,6 +24,13 @@ app.use(helmet());
 app.use(express.json());
 app.use(cors());
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build/"));
+}
+app.get('*', (req, res) => {
+      res.sendFile(path.resolve(__dirname, './client/build', 'index.html')); // relative path
+  });
+
 require('./backend/src/db');
 
 
@@ -33,13 +40,6 @@ app.use(require('./backend/src/api/messages'));
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
-app.get('*', (req, res) => {
-      res.sendFile(path.resolve(__dirname, './client/build', 'index.html')); // relative path
-  });
 
 
 app.listen(PORT, () => {
