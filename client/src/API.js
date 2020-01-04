@@ -1,4 +1,4 @@
-const API_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000/api/v1/messages' : 'https://api.traildocs.xyz/api/v1/messages';
+const API_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000/api/v1/messages' : 'mongodb://willcofer:floating22@ds359118.mlab.com:59118/heroku_xjlhpst3/api/v1/messages';
 
 
 
