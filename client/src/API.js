@@ -3,7 +3,7 @@ const API_URL = window.location.hostname === 'localhost' ? 'http://localhost:500
 
 
 export function getMessages() {
-  return fetch(API_URL)
+  return fetch('/api/v1/messages')
     .then(res => res.json())
     .then(messages => {
       const haveSeenLocation = {};
@@ -42,7 +42,7 @@ export function getLocation() {
 }
 
 export function sendMessage(message) {
-  return fetch(API_URL, {
+  return fetch('/api/v1/messages', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
