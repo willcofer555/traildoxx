@@ -61,15 +61,7 @@ const Tabs = (props) => {
                   <CardText>Latitude: {props.lat}</CardText>
                   <CardText>Longitude: {props.lng}</CardText>
 
-                  <form onSubmit={props.submission}>
-                  <input value={props.latitude} placeholder="Latitude" /> <input value={props.longitude} placeholder="Longitude" />
-
-                  <Button style={{margin:'5px',}} type="submit" > Go</Button>
-                  </form>
-                    <form onSubmit={props.subs}>
-                    <input value={props.latitude} placeholder="City, State" />
-                    <Button style={{margin:'5px',}}  type="submit" >Go </Button>
-                    </form>
+                  
 
 
 
