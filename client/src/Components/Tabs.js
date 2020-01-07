@@ -32,7 +32,7 @@ const Tabs = (props) => {
             className={classnames({ active: activeTab === '2' })}
             onClick={() => { toggle('2'); }}
           >
-            Topography
+            Report
           </NavLink>
         </NavItem>
         <NavItem>
