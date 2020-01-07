@@ -1,9 +1,9 @@
-const API_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000/api/v1/messages' : 'mongodb://willcofer:floating22@ds359118.mlab.com:59118/heroku_xjlhpst3/api/v1/messages';
+const API_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000/api/v1' : 'https://traildocserver.herokuapp.com/api/v1' ;
 
 
 
 export function getMessages() {
-  return fetch('/api/v1/messages')
+  return fetch(API_URL+'/messages')
     .then(res => res.json())
     .then(messages => {
       const haveSeenLocation = {};
@@ -42,7 +42,7 @@ export function getLocation() {
 }
 
 export function sendMessage(message) {
-  return fetch('/api/v1/messages', {
+  return fetch(API_URL+'/messages', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
