@@ -339,19 +339,7 @@ class App extends Component {
 
           />
         </FormGroup>
-        <FormGroup>
-          <Label for="exampleFile">upload image</Label>
-          <Input
-          type="file"
-          name="file"
-          id="exampleFile"
-          onChange={this.valueChanged}
-
-          />
-          <FormText color="muted">
-            testing phase v0.2
-          </FormText>
-        </FormGroup>
+        <p>(If your marker does not appear upon form submission, please refresh the page)</p>
         <Button type="submit" disabled={!this.FormIsValid()} >Submit</Button>
 
 

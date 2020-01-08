@@ -56,12 +56,15 @@ const Tabs = (props) => {
               <Col  style={{padding: '1rem', }} lg="4" sm="8">
               <div>
                 <Card body outline color="secondary" style={{ backgroundColor:'' , borderColor: '',height:'17rem' }}>
+                <h3> Welcome to Traildocs </h3>
+                <h6>Your memories, your places</h6>
+                <p> </p>
                   <h6> <strong>Location</strong></h6>
 
                   <CardText>Latitude: {props.lat}</CardText>
                   <CardText>Longitude: {props.lng}</CardText>
 
-                  
+
 
 
 
